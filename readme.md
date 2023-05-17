@@ -304,5 +304,3 @@ Output for provisioned resources:
 
 Now all resources have been successfully provisioned which were declared in terraform configuration files. To verify login into the AWS console and check.
 
-For example:
-
