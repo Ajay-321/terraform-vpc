@@ -61,7 +61,7 @@ resource "aws_internet_gateway" "myigw" {
 
 resource "aws_nat_gateway" "tf-nat" {
   allocation_id = aws_eip.tf-eip.id
-  subnet_id     = aws_subnet.public_subnets[0].id
+  subnet_id     = element(aws_subnet.public_subnets[*].id, 0)
 
   tags = {
     Name = "${var.prefix}-nat-gateway"
